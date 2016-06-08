@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		17882BF11D089E890090C7DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17882BF01D089E890090C7DB /* AppDelegate.swift */; };
+		17882BF31D089E890090C7DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17882BF21D089E890090C7DB /* ViewController.swift */; };
+		17882BF61D089E890090C7DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17882BF41D089E890090C7DB /* Main.storyboard */; };
+		17882BF81D089E890090C7DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17882BF71D089E890090C7DB /* Assets.xcassets */; };
+		17882BFB1D089E890090C7DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17882BF91D089E890090C7DB /* LaunchScreen.storyboard */; };
+		17882C061D089E890090C7DB /* hingeChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17882C051D089E890090C7DB /* hingeChallengeTests.swift */; };
+		17882C111D089E890090C7DB /* hingeChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17882C101D089E890090C7DB /* hingeChallengeUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		17882C021D089E890090C7DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17882BE51D089E890090C7DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17882BEC1D089E890090C7DB;
+			remoteInfo = hingeChallenge;
+		};
+		17882C0D1D089E890090C7DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17882BE51D089E890090C7DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17882BEC1D089E890090C7DB;
+			remoteInfo = hingeChallenge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		17882BED1D089E890090C7DB /* hingeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hingeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		17882BF01D089E890090C7DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		17882BF21D089E890090C7DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		17882BF51D089E890090C7DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		17882BF71D089E890090C7DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		17882BFA1D089E890090C7DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		17882BFC1D089E890090C7DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17882C011D089E890090C7DB /* hingeChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hingeChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17882C051D089E890090C7DB /* hingeChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hingeChallengeTests.swift; sourceTree = "<group>"; };
+		17882C071D089E890090C7DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17882C0C1D089E890090C7DB /* hingeChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hingeChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17882C101D089E890090C7DB /* hingeChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hingeChallengeUITests.swift; sourceTree = "<group>"; };
+		17882C121D089E890090C7DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		17882BEA1D089E890090C7DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17882BFE1D089E890090C7DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17882C091D089E890090C7DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17882BE41D089E890090C7DB = {
+			isa = PBXGroup;
+			children = (
+				17882BEF1D089E890090C7DB /* hingeChallenge */,
+				17882C041D089E890090C7DB /* hingeChallengeTests */,
+				17882C0F1D089E890090C7DB /* hingeChallengeUITests */,
+				17882BEE1D089E890090C7DB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		17882BEE1D089E890090C7DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				17882BED1D089E890090C7DB /* hingeChallenge.app */,
+				17882C011D089E890090C7DB /* hingeChallengeTests.xctest */,
+				17882C0C1D089E890090C7DB /* hingeChallengeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		17882BEF1D089E890090C7DB /* hingeChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				17882BF01D089E890090C7DB /* AppDelegate.swift */,
+				17882BF21D089E890090C7DB /* ViewController.swift */,
+				17882BF41D089E890090C7DB /* Main.storyboard */,
+				17882BF71D089E890090C7DB /* Assets.xcassets */,
+				17882BF91D089E890090C7DB /* LaunchScreen.storyboard */,
+				17882BFC1D089E890090C7DB /* Info.plist */,
+			);
+			path = hingeChallenge;
+			sourceTree = "<group>";
+		};
+		17882C041D089E890090C7DB /* hingeChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				17882C051D089E890090C7DB /* hingeChallengeTests.swift */,
+				17882C071D089E890090C7DB /* Info.plist */,
+			);
+			path = hingeChallengeTests;
+			sourceTree = "<group>";
+		};
+		17882C0F1D089E890090C7DB /* hingeChallengeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				17882C101D089E890090C7DB /* hingeChallengeUITests.swift */,
+				17882C121D089E890090C7DB /* Info.plist */,
+			);
+			path = hingeChallengeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		17882BEC1D089E890090C7DB /* hingeChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17882C151D089E890090C7DB /* Build configuration list for PBXNativeTarget "hingeChallenge" */;
+			buildPhases = (
+				17882BE91D089E890090C7DB /* Sources */,
+				17882BEA1D089E890090C7DB /* Frameworks */,
+				17882BEB1D089E890090C7DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = hingeChallenge;
+			productName = hingeChallenge;
+			productReference = 17882BED1D089E890090C7DB /* hingeChallenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		17882C001D089E890090C7DB /* hingeChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17882C181D089E890090C7DB /* Build configuration list for PBXNativeTarget "hingeChallengeTests" */;
+			buildPhases = (
+				17882BFD1D089E890090C7DB /* Sources */,
+				17882BFE1D089E890090C7DB /* Frameworks */,
+				17882BFF1D089E890090C7DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17882C031D089E890090C7DB /* PBXTargetDependency */,
+			);
+			name = hingeChallengeTests;
+			productName = hingeChallengeTests;
+			productReference = 17882C011D089E890090C7DB /* hingeChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		17882C0B1D089E890090C7DB /* hingeChallengeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17882C1B1D089E890090C7DB /* Build configuration list for PBXNativeTarget "hingeChallengeUITests" */;
+			buildPhases = (
+				17882C081D089E890090C7DB /* Sources */,
+				17882C091D089E890090C7DB /* Frameworks */,
+				17882C0A1D089E890090C7DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17882C0E1D089E890090C7DB /* PBXTargetDependency */,
+			);
+			name = hingeChallengeUITests;
+			productName = hingeChallengeUITests;
+			productReference = 17882C0C1D089E890090C7DB /* hingeChallengeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		17882BE51D089E890090C7DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = wilksmac;
+				TargetAttributes = {
+					17882BEC1D089E890090C7DB = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = X83T84WPSN;
+					};
+					17882C001D089E890090C7DB = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 17882BEC1D089E890090C7DB;
+					};
+					17882C0B1D089E890090C7DB = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 17882BEC1D089E890090C7DB;
+					};
+				};
+			};
+			buildConfigurationList = 17882BE81D089E890090C7DB /* Build configuration list for PBXProject "hingeChallenge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 17882BE41D089E890090C7DB;
+			productRefGroup = 17882BEE1D089E890090C7DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				17882BEC1D089E890090C7DB /* hingeChallenge */,
+				17882C001D089E890090C7DB /* hingeChallengeTests */,
+				17882C0B1D089E890090C7DB /* hingeChallengeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		17882BEB1D089E890090C7DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17882BFB1D089E890090C7DB /* LaunchScreen.storyboard in Resources */,
+				17882BF81D089E890090C7DB /* Assets.xcassets in Resources */,
+				17882BF61D089E890090C7DB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17882BFF1D089E890090C7DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17882C0A1D089E890090C7DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		17882BE91D089E890090C7DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17882BF31D089E890090C7DB /* ViewController.swift in Sources */,
+				17882BF11D089E890090C7DB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17882BFD1D089E890090C7DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17882C061D089E890090C7DB /* hingeChallengeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17882C081D089E890090C7DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17882C111D089E890090C7DB /* hingeChallengeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		17882C031D089E890090C7DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17882BEC1D089E890090C7DB /* hingeChallenge */;
+			targetProxy = 17882C021D089E890090C7DB /* PBXContainerItemProxy */;
+		};
+		17882C0E1D089E890090C7DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17882BEC1D089E890090C7DB /* hingeChallenge */;
+			targetProxy = 17882C0D1D089E890090C7DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		17882BF41D089E890090C7DB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17882BF51D089E890090C7DB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		17882BF91D089E890090C7DB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17882BFA1D089E890090C7DB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		17882C131D089E890090C7DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		17882C141D089E890090C7DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		17882C161D089E890090C7DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = hingeChallenge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.justwilks.hingeChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		17882C171D089E890090C7DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = hingeChallenge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.justwilks.hingeChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		17882C191D089E890090C7DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = hingeChallengeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.justwilks.hingeChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hingeChallenge.app/hingeChallenge";
+			};
+			name = Debug;
+		};
+		17882C1A1D089E890090C7DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = hingeChallengeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.justwilks.hingeChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/hingeChallenge.app/hingeChallenge";
+			};
+			name = Release;
+		};
+		17882C1C1D089E890090C7DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = hingeChallengeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.justwilks.hingeChallengeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = hingeChallenge;
+			};
+			name = Debug;
+		};
+		17882C1D1D089E890090C7DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = hingeChallengeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.justwilks.hingeChallengeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = hingeChallenge;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		17882BE81D089E890090C7DB /* Build configuration list for PBXProject "hingeChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17882C131D089E890090C7DB /* Debug */,
+				17882C141D089E890090C7DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17882C151D089E890090C7DB /* Build configuration list for PBXNativeTarget "hingeChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17882C161D089E890090C7DB /* Debug */,
+				17882C171D089E890090C7DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		17882C181D089E890090C7DB /* Build configuration list for PBXNativeTarget "hingeChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17882C191D089E890090C7DB /* Debug */,
+				17882C1A1D089E890090C7DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		17882C1B1D089E890090C7DB /* Build configuration list for PBXNativeTarget "hingeChallengeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17882C1C1D089E890090C7DB /* Debug */,
+				17882C1D1D089E890090C7DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 17882BE51D089E890090C7DB /* Project object */;
+}
