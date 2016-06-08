@@ -7,15 +7,18 @@
 //
 
 import Foundation
+import UIKit
 
 class Photo {
     
     var name: String
     var description: String
+    var image: UIImage
     
-    init(name: String, description: String){
+    init(name: String, description: String, image: UIImage){
         self.name = name
         self.description = description
+        self.image = image
     }
     
 }

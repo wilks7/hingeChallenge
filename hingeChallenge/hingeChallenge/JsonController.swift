@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class JsonController {
     
@@ -39,15 +40,19 @@ class JsonController {
                     return
                 }
                 
-                //handle loop JSON to custon object
+                
                 var photoArray = [Photo]()
                 
+                //handle loop JSON to custon object
                 if let dataDictionary = jsonObject as? [[String:AnyObject]]{
                     for photoDict in dataDictionary {
-                        // setting variables to empty string just incase if let returns nil
+                        // setting variables to empty string just incase json values returns nil
                         var name = ""
                         var description = ""
+                        var photo: UIImage?
                         
+                        
+                        //check json values
                         if let dictName = photoDict["imageName"] as? String {
                             name = dictName
                         }
@@ -55,8 +60,29 @@ class JsonController {
                             description = dicDescription
                         }
                         
-                        let newPhoto = Photo(name: name, description: description)
-                        photoArray.append(newPhoto)
+                        if let dictUrlString = photoDict["imageURL"] as? String {
+                            
+                            guard let url = NSURL(string: dictUrlString) else {return}
+
+                            if let data = NSData(contentsOfURL: url){
+                                if let image = UIImage(data: data){
+                                    //dispatch_async(dispatch_get_main_queue()) { () -> Void in
+                                        photo = image
+                                    //}
+                                }
+                            }
+                        }
+                        
+                        //create photo object to add to empty photo object array
+                        if let photo = photo {
+                            let newPhoto = Photo(name: name, description: description, image: photo)
+                            photoArray.append(newPhoto)
+                        } else {
+                            // HANDLE: INSERT DEFAULT IMAGE
+//                            let newPhoto = Photo(name: name, description: description, image: photo)
+//                            photoArray.append(newPhoto)
+                            print("photo is nil")
+                        }
                     }
                     completion(photos: photoArray, error: nil)
                 } else {
@@ -65,10 +91,7 @@ class JsonController {
                 }
 
                 
-            }//dataTask
-            dataTask.resume()
+            }.resume()
         }
     }//fetchPhotos
-    
-    
 }
