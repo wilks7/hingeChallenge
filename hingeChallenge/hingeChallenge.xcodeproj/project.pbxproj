@@ -14,6 +14,8 @@
 		17882BFB1D089E890090C7DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17882BF91D089E890090C7DB /* LaunchScreen.storyboard */; };
 		17882C061D089E890090C7DB /* hingeChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17882C051D089E890090C7DB /* hingeChallengeTests.swift */; };
 		17882C111D089E890090C7DB /* hingeChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17882C101D089E890090C7DB /* hingeChallengeUITests.swift */; };
+		17882C1F1D089FB50090C7DB /* JsonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17882C1E1D089FB50090C7DB /* JsonController.swift */; };
+		17882C211D08A0560090C7DB /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17882C201D08A0560090C7DB /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		17882C0C1D089E890090C7DB /* hingeChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hingeChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17882C101D089E890090C7DB /* hingeChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hingeChallengeUITests.swift; sourceTree = "<group>"; };
 		17882C121D089E890090C7DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17882C1E1D089FB50090C7DB /* JsonController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonController.swift; sourceTree = "<group>"; };
+		17882C201D08A0560090C7DB /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				17882BF01D089E890090C7DB /* AppDelegate.swift */,
 				17882BF21D089E890090C7DB /* ViewController.swift */,
+				17882C1E1D089FB50090C7DB /* JsonController.swift */,
+				17882C201D08A0560090C7DB /* Photo.swift */,
 				17882BF41D089E890090C7DB /* Main.storyboard */,
 				17882BF71D089E890090C7DB /* Assets.xcassets */,
 				17882BF91D089E890090C7DB /* LaunchScreen.storyboard */,
@@ -257,8 +263,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17882C211D08A0560090C7DB /* Photo.swift in Sources */,
 				17882BF31D089E890090C7DB /* ViewController.swift in Sources */,
 				17882BF11D089E890090C7DB /* AppDelegate.swift in Sources */,
+				17882C1F1D089FB50090C7DB /* JsonController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
