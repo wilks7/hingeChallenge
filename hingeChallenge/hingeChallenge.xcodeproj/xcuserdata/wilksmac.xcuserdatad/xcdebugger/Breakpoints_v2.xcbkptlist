@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "hingeChallenge/JsonController.swift"
-            timestampString = "487109730.495633"
+            filePath = "hingeChallenge/GalleryViewController.swift"
+            timestampString = "487132510.895406"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "fetchPhotos(_:)"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "updateView(_:place:total:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,173 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "hingeChallenge/JsonController.swift"
-            timestampString = "487109730.495633"
+            filePath = "hingeChallenge/GalleryViewController.swift"
+            timestampString = "487132510.895406"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "fetchPhotos(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "hingeChallenge/JsonController.swift"
-            timestampString = "487109730.495633"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
-            landmarkName = "fetchPhotos(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "hingeChallenge/JsonController.swift"
-            timestampString = "487109730.495633"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "fetchPhotos(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "hingeChallenge/JsonController.swift"
-            timestampString = "487109730.495633"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "fetchPhotos(_:)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static hingeChallenge.JsonController.(fetchPhotos ((photos : Swift.Optional&lt;Swift.Array&lt;hingeChallenge.Photo&gt;&gt;, error : Swift.Optional&lt;__ObjC.NSError&gt;) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "hingeChallenge"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/wilksmac/Documents/git/hingeChallenge/hingeChallenge/hingeChallenge/JsonController.swift"
-                  timestampString = "487109073.113138"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "67"
-                  endingLineNumber = "67"
-                  offsetFromSymbolStart = "3479">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static hingeChallenge.JsonController.(fetchPhotos ((photos : Swift.Optional&lt;Swift.Array&lt;hingeChallenge.Photo&gt;&gt;, error : Swift.Optional&lt;__ObjC.NSError&gt;) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "hingeChallenge"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/wilksmac/Documents/git/hingeChallenge/hingeChallenge/hingeChallenge/JsonController.swift"
-                  timestampString = "487109073.11322"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "67"
-                  endingLineNumber = "67"
-                  offsetFromSymbolStart = "3565">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "hingeChallenge/JsonController.swift"
-            timestampString = "487109730.495633"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "fetchPhotos(_:)"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static hingeChallenge.JsonController.(fetchPhotos ((photos : Swift.Optional&lt;Swift.Array&lt;hingeChallenge.Photo&gt;&gt;, error : Swift.Optional&lt;__ObjC.NSError&gt;) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "hingeChallenge"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/wilksmac/Documents/git/hingeChallenge/hingeChallenge/hingeChallenge/JsonController.swift"
-                  timestampString = "487109073.113712"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "3584">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static hingeChallenge.JsonController.(fetchPhotos ((photos : Swift.Optional&lt;Swift.Array&lt;hingeChallenge.Photo&gt;&gt;, error : Swift.Optional&lt;__ObjC.NSError&gt;) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "hingeChallenge"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/wilksmac/Documents/git/hingeChallenge/hingeChallenge/hingeChallenge/JsonController.swift"
-                  timestampString = "487109073.113791"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "68"
-                  endingLineNumber = "68"
-                  offsetFromSymbolStart = "3670">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "hingeChallenge/JsonController.swift"
-            timestampString = "487109730.495633"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "fetchPhotos(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "hingeChallenge/JsonController.swift"
-            timestampString = "487109730.495633"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "fetchPhotos(_:)"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "updateView(_:place:total:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

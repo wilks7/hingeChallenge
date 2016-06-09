@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		170974781D08F3310042674F /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170974771D08F3310042674F /* PhotoTableViewCell.swift */; };
+		1709747A1D08F6B00042674F /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 170974791D08F6B00042674F /* GalleryViewController.swift */; };
+		1709747C1D09005F0042674F /* PhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1709747B1D09005F0042674F /* PhotoController.swift */; };
 		17882BF11D089E890090C7DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17882BF01D089E890090C7DB /* AppDelegate.swift */; };
 		17882BF31D089E890090C7DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17882BF21D089E890090C7DB /* ViewController.swift */; };
 		17882BF61D089E890090C7DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17882BF41D089E890090C7DB /* Main.storyboard */; };
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		170974771D08F3310042674F /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoTableViewCell.swift; path = ../PhotoTableViewCell.swift; sourceTree = "<group>"; };
+		170974791D08F6B00042674F /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		1709747B1D09005F0042674F /* PhotoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoController.swift; sourceTree = "<group>"; };
 		17882BED1D089E890090C7DB /* hingeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hingeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17882BF01D089E890090C7DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17882BF21D089E890090C7DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,10 +108,13 @@
 			isa = PBXGroup;
 			children = (
 				17882BF01D089E890090C7DB /* AppDelegate.swift */,
+				170974771D08F3310042674F /* PhotoTableViewCell.swift */,
 				17882BF21D089E890090C7DB /* ViewController.swift */,
 				17882C1E1D089FB50090C7DB /* JsonController.swift */,
 				17882C201D08A0560090C7DB /* Photo.swift */,
 				17882BF41D089E890090C7DB /* Main.storyboard */,
+				1709747B1D09005F0042674F /* PhotoController.swift */,
+				170974791D08F6B00042674F /* GalleryViewController.swift */,
 				17882BF71D089E890090C7DB /* Assets.xcassets */,
 				17882BF91D089E890090C7DB /* LaunchScreen.storyboard */,
 				17882BFC1D089E890090C7DB /* Info.plist */,
@@ -263,8 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				170974781D08F3310042674F /* PhotoTableViewCell.swift in Sources */,
 				17882C211D08A0560090C7DB /* Photo.swift in Sources */,
 				17882BF31D089E890090C7DB /* ViewController.swift in Sources */,
+				1709747C1D09005F0042674F /* PhotoController.swift in Sources */,
+				1709747A1D08F6B00042674F /* GalleryViewController.swift in Sources */,
 				17882BF11D089E890090C7DB /* AppDelegate.swift in Sources */,
 				17882C1F1D089FB50090C7DB /* JsonController.swift in Sources */,
 			);
@@ -493,6 +505,7 @@
 				17882C171D089E890090C7DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		17882C181D089E890090C7DB /* Build configuration list for PBXNativeTarget "hingeChallengeTests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +514,7 @@
 				17882C1A1D089E890090C7DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		17882C1B1D089E890090C7DB /* Build configuration list for PBXNativeTarget "hingeChallengeUITests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +523,7 @@
 				17882C1D1D089E890090C7DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

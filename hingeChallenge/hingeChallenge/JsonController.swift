@@ -89,8 +89,6 @@ class JsonController {
                     print("error looping through JSON object")
                     completion(photos: nil, error: nil)
                 }
-
-                
             }.resume()
         }
     }//fetchPhotos
