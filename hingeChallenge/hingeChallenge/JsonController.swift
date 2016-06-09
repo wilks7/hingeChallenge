@@ -14,7 +14,7 @@ class JsonController {
     
     static let urlString = "https://hinge-homework.s3.amazonaws.com/client/services/homework.json"
     
-    static func fetchPhotos(completion:(photos: [Photo]?, error: NSError?)->Void){
+    static func fetchPhotoObjects(completion:(photos: [Photo]?, error: NSError?)->Void){
         
         if let url = NSURL(string: urlString){
             
@@ -47,9 +47,11 @@ class JsonController {
                 if let dataDictionary = jsonObject as? [[String:AnyObject]]{
                     for photoDict in dataDictionary {
                         // setting variables to empty string just incase json values returns nil
-                        var name = ""
+                        var name = "No Name"
                         var description = ""
+                        var imgUrlString = ""
                         var photo: UIImage?
+                        let defaultImage = UIImage(named: "noImage")!
                         
                         
                         //check json values
@@ -60,27 +62,32 @@ class JsonController {
                             description = dicDescription
                         }
                         
-                        if let dictUrlString = photoDict["imageURL"] as? String {
-                            
-                            guard let url = NSURL(string: dictUrlString) else {return}
-
-                            if let data = NSData(contentsOfURL: url){
-                                if let image = UIImage(data: data){
-                                    //dispatch_async(dispatch_get_main_queue()) { () -> Void in
-                                        photo = image
-                                    //}
-                                }
-                            }
+                        if let dicImgUrlString = photoDict["imageURL"] as? String {
+                            imgUrlString = dicImgUrlString
                         }
                         
-                        //create photo object to add to empty photo object array
+//                        if let dictUrlString = photoDict["imageURL"] as? String {
+//                            
+//                            guard let url = NSURL(string: dictUrlString) else {return}
+//
+//                            if let data = NSData(contentsOfURL: url){
+//                                if let image = UIImage(data: data){
+//                                    //dispatch_async(dispatch_get_main_queue()) { () -> Void in
+//                                        photo = image
+//                                    //}
+//                                }
+//                            }
+//                        }
+                        
+                        //create photo object to add to photo object array declared above
                         if let photo = photo {
-                            let newPhoto = Photo(name: name, description: description, image: photo)
+                            //let newPhoto = Photo(name: name, description: description,  image: photo)
+                            let newPhoto = Photo(name: name, description: description, imgUrlString: imgUrlString, image: defaultImage)
                             photoArray.append(newPhoto)
                         } else {
-                            // HANDLE: INSERT DEFAULT IMAGE
-//                            let newPhoto = Photo(name: name, description: description, image: photo)
-//                            photoArray.append(newPhoto)
+                            //let newPhoto = Photo(name: name, description: description, image: defaultImage)
+                            let newPhoto = Photo(name: name, description: description, imgUrlString: imgUrlString, image: defaultImage)
+                            photoArray.append(newPhoto)
                             print("photo is nil")
                         }
                     }
@@ -92,4 +99,34 @@ class JsonController {
             }.resume()
         }
     }//fetchPhotos
+    
+    
+    static func photosFromUrl(urlStringArray: [String], completion:(images: [UIImage])->Void){
+        var allImages = [UIImage]()
+        let dispatchGroup = dispatch_group_create()
+        
+        for s in urlStringArray {
+            dispatch_group_enter(dispatchGroup)
+            
+            guard let url = NSURL(string: s) else {return}
+            
+            if let data = NSData(contentsOfURL: url){
+                if let image = UIImage(data: data){
+                    allImages.append(image)
+                } else {
+                    allImages.append(UIImage(named: "noImage")!)
+                }
+            } else {
+                allImages.append(UIImage(named: "noImage")!)
+            }
+            
+            dispatch_group_leave(dispatchGroup)
+        }//for
+        
+        dispatch_group_notify(dispatchGroup, dispatch_get_main_queue()) { () -> Void in
+            completion(images: allImages)
+        }
+    }
+    
 }
+

@@ -23,4 +23,14 @@ class PhotoTableViewCell: UITableViewCell {
         imageOutlet.image = photo.image
     }
     
+    func roundImage(){
+        dispatch_async(dispatch_get_main_queue()) { () -> Void in
+            self.imageOutlet.layer.cornerRadius = self.imageOutlet.frame.size.width / 2
+            self.imageOutlet.layer.borderWidth = 1.50
+            self.imageOutlet.layer.borderColor = UIColor.blueColor().CGColor
+            self.imageOutlet.clipsToBounds = true
+            self.imageOutlet.layer.masksToBounds = true
+            self.imageOutlet.alpha = 1
+        }
+    }
 }
