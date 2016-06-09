@@ -12,42 +12,95 @@ class GalleryViewController: UIViewController {
 
     @IBOutlet weak var imageViewOutlet: UIImageView!
     
-    @IBOutlet weak var titleOutlet: UILabel!
-    
     @IBOutlet var myView: UIView!
     
-    var place = 0
+    @IBOutlet weak var buttonOutlet: UIButton!
+    
+    var index = 0
+    
+    var myTimer: NSTimer?
+    
+    var slideShowStatus = false
+    
+    
+    @IBAction func trashButtonTapped(sender: AnyObject) {
+        self.imageViewOutlet.stopAnimating()
+        myTimer?.invalidate()
+        let photo = PhotoController.sharedController.allPhotos[self.index - 1]
+        self.imageViewOutlet.image = photo.image
+        slideShowStatus = false
+        buttonOutlet.setTitle("Start Slideshow", forState: .Normal)
+
+        let alert = UIAlertController(title: "Erase", message: "Are you sure you would like to erase '\(photo.name)' photo?", preferredStyle: .Alert)
+        let erase = UIAlertAction(title: "Erase", style: .Destructive) { (_) in
+            PhotoController.sharedController.allPhotos.removeAtIndex(self.index - 1)
+            if self.index > 2 {
+                self.imageViewOutlet.image = PhotoController.sharedController.allPhotos[self.index - 2].image
+            } else if self.index == 0{
+                self.imageViewOutlet.image = PhotoController.sharedController.allPhotos[self.index+1].image
+            } else if self.index == 1{
+                self.imageViewOutlet.image = PhotoController.sharedController.allPhotos[self.index - 1].image
+            }
+        }
+        let no = UIAlertAction(title: "No", style: .Default, handler: nil)
+        alert.addAction(no)
+        alert.addAction(erase)
+        presentViewController(alert, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
-    func slideShow(){
-            if place == PhotoController.sharedController.allPhotos.count - 1{
-                place = 0
-            } else {
-                place++
-            }
-            //sleep(2)
-            let photo = PhotoController.sharedController.allPhotos[self.place]
-            
-            self.updateView(photo, place: self.place, total: PhotoController.sharedController.allPhotos.count)
-    }
-    
     func updateView(photo: Photo, place: Int, total: Int){
-        self.place = place
+        self.index = place
         imageViewOutlet.image = photo.image
-        titleOutlet.text = photo.name
         title = "\(place+1)/\(total)"
+    }
+    
+    func startSlideShow(){
+        self.index = 1
+        title = "1/\(PhotoController.sharedController.allPhotos.count)"
+        slideShowStatus = true
+        var imageArray = [UIImage]()
+        for p in PhotoController.sharedController.allPhotos {
+            
+            let image = p.image
+            imageArray.append(image)
+        }
+        
+        self.imageViewOutlet.animationImages = imageArray
+        self.imageViewOutlet.animationDuration = 30.0
+        self.imageViewOutlet.startAnimating()
+        myTimer = NSTimer.scheduledTimerWithTimeInterval(2.3, target: self, selector: "displayTitle", userInfo: nil, repeats: true)
+        
+    }
+    
+    func displayTitle(){
+        title = "\(self.index+1)/\(PhotoController.sharedController.allPhotos.count)"
+        index++
+        if self.index == PhotoController.sharedController.allPhotos.count {
+            index = 0
+        }
     }
     
     //testing slideshow with button press
     @IBAction func buttonPressed(sender: AnyObject) {
-        slideShow()
+        if slideShowStatus {
+            self.imageViewOutlet.stopAnimating()
+            myTimer?.invalidate()
+            if index != 0 {
+                self.imageViewOutlet.image = PhotoController.sharedController.allPhotos[self.index - 1].image
+            } else {
+                self.imageViewOutlet.image = PhotoController.sharedController.allPhotos[self.index].image
+            }
+            slideShowStatus = false
+            buttonOutlet.setTitle("Start Slideshow", forState: .Normal)
+        } else {
+            startSlideShow()
+            buttonOutlet.setTitle("Stop Slideshow", forState: .Normal)
+        }
+        
     }
     
 }

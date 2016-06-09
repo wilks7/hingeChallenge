@@ -24,7 +24,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 PhotoController.sharedController.allPhotos = photos
                 self.tableViewOutlet.reloadData()
             }
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.tableViewOutlet.reloadData()
+            })
         }
+        
     }
     
     

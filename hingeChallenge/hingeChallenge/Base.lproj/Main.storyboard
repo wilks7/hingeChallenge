@@ -42,24 +42,22 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RM8-As-gzv">
-                                                    <rect key="frame" x="365" y="26" width="212" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="212" id="eYk-2B-2m6"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="description text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RM8-As-gzv">
+                                                    <rect key="frame" x="98" y="49" width="257" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="RM8-As-gzv" firstAttribute="width" secondItem="eti-MY-jYH" secondAttribute="height" multiplier="257:74" id="1FX-cU-Wk9"/>
                                                 <constraint firstItem="EDs-3a-zfn" firstAttribute="centerY" secondItem="eti-MY-jYH" secondAttribute="centerY" id="EKy-du-bdd"/>
                                                 <constraint firstItem="0tC-rr-GpM" firstAttribute="centerY" secondItem="eti-MY-jYH" secondAttribute="centerY" id="RAR-iu-kFm"/>
-                                                <constraint firstItem="RM8-As-gzv" firstAttribute="centerY" secondItem="eti-MY-jYH" secondAttribute="centerY" id="d9G-U1-vxL"/>
                                                 <constraint firstItem="0tC-rr-GpM" firstAttribute="leading" secondItem="eti-MY-jYH" secondAttribute="leadingMargin" constant="11" id="gTC-VQ-ovP"/>
                                                 <constraint firstItem="0tC-rr-GpM" firstAttribute="width" secondItem="eti-MY-jYH" secondAttribute="height" multiplier="61:74" id="gYI-qz-aYr"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="RM8-As-gzv" secondAttribute="trailing" constant="15" id="jpz-ON-ZgT"/>
                                                 <constraint firstItem="EDs-3a-zfn" firstAttribute="leading" secondItem="0tC-rr-GpM" secondAttribute="trailing" constant="18" id="mWO-0m-MI8"/>
+                                                <constraint firstItem="RM8-As-gzv" firstAttribute="leading" secondItem="0tC-rr-GpM" secondAttribute="trailing" constant="18" id="p5j-cN-G0L"/>
+                                                <constraint firstItem="RM8-As-gzv" firstAttribute="top" secondItem="EDs-3a-zfn" secondAttribute="bottom" constant="2" id="ycV-Fx-Rgn"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -108,18 +106,9 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f8k-Pr-f9x">
                                 <rect key="frame" x="0.0" y="64" width="600" height="359"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRR-f6-j7e">
-                                <rect key="frame" x="256" y="489" width="89" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="89" id="K7c-3S-ytD"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0r-aE-h5u">
-                                <rect key="frame" x="256" y="529" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0r-aE-h5u">
+                                <rect key="frame" x="246" y="529" width="108" height="30"/>
+                                <state key="normal" title="Start Slideshow"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="cXc-FP-kqq" eventType="touchUpInside" id="fGg-fe-OgF"/>
                                 </connections>
@@ -130,16 +119,22 @@
                             <constraint firstItem="KIo-ho-UUm" firstAttribute="top" secondItem="f8k-Pr-f9x" secondAttribute="bottom" constant="177" id="4kW-so-8Mm"/>
                             <constraint firstItem="f8k-Pr-f9x" firstAttribute="leading" secondItem="4w1-GA-dhO" secondAttribute="leadingMargin" constant="-20" id="B76-3B-op4"/>
                             <constraint firstItem="KIo-ho-UUm" firstAttribute="top" secondItem="y0r-aE-h5u" secondAttribute="bottom" constant="41" id="DyY-bm-5Qj"/>
-                            <constraint firstItem="HRR-f6-j7e" firstAttribute="centerX" secondItem="4w1-GA-dhO" secondAttribute="centerX" id="Q1O-c2-jdl"/>
                             <constraint firstAttribute="trailingMargin" secondItem="f8k-Pr-f9x" secondAttribute="trailing" constant="-20" id="doE-LZ-aaR"/>
                             <constraint firstItem="y0r-aE-h5u" firstAttribute="centerX" secondItem="4w1-GA-dhO" secondAttribute="centerX" id="ehy-tC-RXP"/>
                             <constraint firstItem="f8k-Pr-f9x" firstAttribute="top" secondItem="kgI-na-ogK" secondAttribute="bottom" id="uex-yS-F7g"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="h1q-zx-SYB">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="8tf-NR-vTN">
+                            <connections>
+                                <action selector="trashButtonTapped:" destination="cXc-FP-kqq" id="1w0-pq-Ju1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="buttonOutlet" destination="y0r-aE-h5u" id="r6d-Cw-Kw0"/>
                         <outlet property="imageViewOutlet" destination="f8k-Pr-f9x" id="rOY-OP-wJn"/>
                         <outlet property="myView" destination="4w1-GA-dhO" id="Cbv-zS-bc1"/>
-                        <outlet property="titleOutlet" destination="HRR-f6-j7e" id="TWI-av-uUV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R6x-W0-yIo" userLabel="First Responder" sceneMemberID="firstResponder"/>
