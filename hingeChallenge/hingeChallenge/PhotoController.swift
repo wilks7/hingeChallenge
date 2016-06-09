@@ -18,4 +18,5 @@ class PhotoController {
     func getPhoto(){
         //place holder for asynch and other functions
     }
+    
 }

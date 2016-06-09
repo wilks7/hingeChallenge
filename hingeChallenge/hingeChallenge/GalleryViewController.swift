@@ -50,6 +50,9 @@ class GalleryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        buttonOutlet.layer.borderWidth = 1.50
+        buttonOutlet.layer.borderColor = UIColor.myButtonColor().CGColor
+        buttonOutlet.layer.cornerRadius = 5
     }
     
     func updateView(photo: Photo, place: Int, total: Int){
@@ -72,13 +75,13 @@ class GalleryViewController: UIViewController {
         self.imageViewOutlet.animationImages = imageArray
         self.imageViewOutlet.animationDuration = 30.0
         self.imageViewOutlet.startAnimating()
-        myTimer = NSTimer.scheduledTimerWithTimeInterval(2.3, target: self, selector: "displayTitle", userInfo: nil, repeats: true)
+        myTimer = NSTimer.scheduledTimerWithTimeInterval(2.3, target: self, selector: #selector(GalleryViewController.displayTitle), userInfo: nil, repeats: true)
         
     }
     
     func displayTitle(){
         title = "\(self.index+1)/\(PhotoController.sharedController.allPhotos.count)"
-        index++
+        index += 1
         if self.index == PhotoController.sharedController.allPhotos.count {
             index = 0
         }

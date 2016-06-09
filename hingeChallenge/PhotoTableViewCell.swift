@@ -20,6 +20,9 @@ class PhotoTableViewCell: UITableViewCell {
     func setupCell(photo: Photo){
         nameOutlet.text = photo.name
         descriptionOutlet.text = photo.description
+        
+        nameOutlet.textColor = .myButtonColor()
+        descriptionOutlet.textColor = .myButtonColor()
         imageOutlet.image = photo.image
     }
     
@@ -27,7 +30,7 @@ class PhotoTableViewCell: UITableViewCell {
         dispatch_async(dispatch_get_main_queue()) { () -> Void in
             self.imageOutlet.layer.cornerRadius = self.imageOutlet.frame.size.width / 2
             self.imageOutlet.layer.borderWidth = 1.50
-            self.imageOutlet.layer.borderColor = UIColor.blueColor().CGColor
+            self.imageOutlet.layer.borderColor = UIColor.myButtonColor().CGColor
             self.imageOutlet.clipsToBounds = true
             self.imageOutlet.layer.masksToBounds = true
             self.imageOutlet.alpha = 1

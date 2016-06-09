@@ -16,31 +16,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBOutlet weak var tableViewOutlet: UITableView!
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableViewOutlet.reloadData()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //testing json
-//        JsonController.fetchPhotos { (photos, error) in
-//            if let photos = photos {
-//                PhotoController.sharedController.allPhotos = photos
-//                //self.tableViewOutlet.reloadData()
-//            } else if let error = error {
-//                print(error.localizedDescription)
-//            }
-//            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-//                self.tableViewOutlet.reloadData()
-//            })
-//        }
+        title = "My Photos"
         
         JsonController.fetchPhotoObjects { (photos, error) in
             if let photos = photos {
                 
                 PhotoController.sharedController.allPhotos = photos
-                let imgUrlArray = photos.map({$0.imgUrlString})
                 dispatch_async(dispatch_get_main_queue()) { () -> Void in
                     self.tableViewOutlet.reloadData()
                 }
+                
+                let imgUrlArray = photos.map({$0.imgUrlString})
                 JsonController.photosFromUrl(imgUrlArray, completion: { (images) in
                     for i in 0...images.count - 1 {
                         if imgUrlArray[i] == PhotoController.sharedController.allPhotos[i].imgUrlString {
@@ -53,7 +46,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 })
             }
         }
-        
     }
     
     
@@ -76,6 +68,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let photo = PhotoController.sharedController.allPhotos[indexPath.row]
             
             cell.setupCell(photo)
+            cell.roundImage()
             
             return cell
             
@@ -84,17 +77,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let cell = tableView.dequeueReusableCellWithIdentifier(myCell, forIndexPath: indexPath) as! PhotoTableViewCell
             
             cell.imageOutlet.image = UIImage(named: "noImage")!
-            
             cell.nameOutlet.text = "No Images"
-            
+            cell.nameOutlet.textColor = .myButtonColor()
             cell.descriptionOutlet.text = "There was a problem loading the images"
-            
+            cell.descriptionOutlet.textColor = .myButtonColor()
+            cell.roundImage()
             cell.selectionStyle = .None
             
             return cell
         }
-        
-        
     }
     
     // MARK: - Segue
