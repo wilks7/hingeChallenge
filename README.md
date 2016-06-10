@@ -16,24 +16,24 @@ Homepage View
 
 Gallery View (Consists of 2 sections) ßßß
   Image View
-	..* Should display a single image to fit the area. 
-	- Will initially display the image that was clicked on in the previous step.
-	- Every two seconds the view should progress to the next image in the list.
-	- After the last image is displayed, starting over with the first image in the list.
+- Should display a single image to fit the area. 
+- Will initially display the image that was clicked on in the previous step.
+- Every two seconds the view should progress to the next image in the list.
+- After the last image is displayed, starting over with the first image in the list.
   Navigation Bar
-	- Back arrow button to return back to the Homepage. 
-	- Displays image’s position in the list (i.e., “5/16”).
-	- Includes a button that removes an image from the list.
+- Back arrow button to return back to the Homepage. 
+- Displays image’s position in the list (i.e., “5/16”).
+- Includes a button that removes an image from the list.
 
 
 Additional Requirements
-	- Testing is very important. Show us you know how to test the important pieces of your code.
-	- The code should be clean and readable, and you should follow best practices for architecture, code formatting, variable/class names, etc.
-	- Please include a README with any steps needed to start, and test your app.
-	- Use comments where required. 
-	- You can assume we have:
+- Testing is very important. Show us you know how to test the important pieces of your code.
+- The code should be clean and readable, and you should follow best practices for architecture, code formatting, variable/class names, etc.
+- Please include a README with any steps needed to start, and test your app.
+- Use comments where required. 
+- You can assume we have:
 	    XCode
 	    Git
-	- If there are any other required tools to run the project please specify or include a bundle.
-	- The app should cache data for offline use.
-	- The app should be attractive if initially started in offline mode.
+- If there are any other required tools to run the project please specify or include a bundle.
+- The app should cache data for offline use.
+- The app should be attractive if initially started in offline mode.
