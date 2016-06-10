@@ -23,17 +23,12 @@ extension UIColor{
 
 class AppearenceController {
     
-    
     class func setupAppearence(){
         
         UINavigationBar.appearance().tintColor = .myColor()
-        //UINavigationBar.appearance().barTintColor = .myColor()
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.myColor()]
-        
         UIButton.appearance().tintColor = UIColor.myButtonColor()
-        
         UITableView.appearance().backgroundColor = .myColor()
-        
         UITableViewCell.appearance().backgroundColor = .myColor()
         
         

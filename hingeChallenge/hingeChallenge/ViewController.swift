@@ -33,25 +33,30 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                     self.tableViewOutlet.reloadData()
                 }
                 
-                let imgUrlArray = photos.map({$0.imgUrlString})
-                JsonController.photosFromUrl(imgUrlArray, completion: { (images) in
-                    for i in 0...images.count - 1 {
-                        if imgUrlArray[i] == PhotoController.sharedController.allPhotos[i].imgUrlString {
-                            PhotoController.sharedController.allPhotos[i].setImage(images[i])
-                        }
-                    }
-                    dispatch_async(dispatch_get_main_queue()) { () -> Void in
-                        self.tableViewOutlet.reloadData()
-                    }
-                })
+                
+            // OLD METHOD, leave it here just in case
+                
+//                let imgUrlArray = photos.map({$0.imgUrlString})
+//                PhotoController.sharedController.photosFromUrl(imgUrlArray, completion: { (images) in
+//                    for i in 0...images.count - 1 {
+//                        if imgUrlArray[i] == PhotoController.sharedController.allPhotos[i].imgUrlString {
+//                            PhotoController.sharedController.allPhotos[i].setImage(images[i])
+//                        }
+//                    }
+//                    dispatch_async(dispatch_get_main_queue()) { () -> Void in
+//                        self.tableViewOutlet.reloadData()
+//                    }
+//                })
             }
         }
     }
     
     
-    // MAKR: - TableView DataSource
+    // MARK: - TableView DataSource
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        //check if Json call loaded anything
         if PhotoController.sharedController.allPhotos.count > 0 {
             return PhotoController.sharedController.allPhotos.count
         } else {
@@ -66,9 +71,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let cell = tableView.dequeueReusableCellWithIdentifier(myCell, forIndexPath: indexPath) as! PhotoTableViewCell
             
             let photo = PhotoController.sharedController.allPhotos[indexPath.row]
-            
             cell.setupCell(photo)
             cell.roundImage()
+            
+            //pull photo from url and set it to UI and object
+            PhotoController.sharedController.getPhoto(photo, completion: { (image) in
+                cell.imageOutlet.image = image
+                PhotoController.sharedController.allPhotos[indexPath.row].setImage(image)
+            })
             
             return cell
             
@@ -76,6 +86,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             
             let cell = tableView.dequeueReusableCellWithIdentifier(myCell, forIndexPath: indexPath) as! PhotoTableViewCell
             
+            //set default values for no data
             cell.imageOutlet.image = UIImage(named: "noImage")!
             cell.nameOutlet.text = "No Images"
             cell.nameOutlet.textColor = .myButtonColor()
@@ -114,6 +125,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         if identifier == "toGallery" {
+            //if no data, shouldnt be clickable
             if PhotoController.sharedController.allPhotos.count == 0 {
                 return false
             } else {

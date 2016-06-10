@@ -111,16 +111,12 @@
 		17882BEF1D089E890090C7DB /* hingeChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				17882BF01D089E890090C7DB /* AppDelegate.swift */,
-				170974771D08F3310042674F /* PhotoTableViewCell.swift */,
-				17882BF21D089E890090C7DB /* ViewController.swift */,
-				17882C1E1D089FB50090C7DB /* JsonController.swift */,
+				17C29CFD1D0A5749006F3157 /* Controller */,
+				17C29CFC1D0A5730006F3157 /* ViewController */,
 				17D7DCC11D0A193F00CD8527 /* ImageLoader.swift */,
-				17D7DCC31D0A1D5C00CD8527 /* AppearenceController.swift */,
 				17882C201D08A0560090C7DB /* Photo.swift */,
+				17882BF01D089E890090C7DB /* AppDelegate.swift */,
 				17882BF41D089E890090C7DB /* Main.storyboard */,
-				1709747B1D09005F0042674F /* PhotoController.swift */,
-				170974791D08F6B00042674F /* GalleryViewController.swift */,
 				17882BF71D089E890090C7DB /* Assets.xcassets */,
 				17882BF91D089E890090C7DB /* LaunchScreen.storyboard */,
 				17882BFC1D089E890090C7DB /* Info.plist */,
@@ -144,6 +140,26 @@
 				17882C121D089E890090C7DB /* Info.plist */,
 			);
 			path = hingeChallengeUITests;
+			sourceTree = "<group>";
+		};
+		17C29CFC1D0A5730006F3157 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				17882BF21D089E890090C7DB /* ViewController.swift */,
+				170974771D08F3310042674F /* PhotoTableViewCell.swift */,
+				170974791D08F6B00042674F /* GalleryViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		17C29CFD1D0A5749006F3157 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				17D7DCC31D0A1D5C00CD8527 /* AppearenceController.swift */,
+				17882C1E1D089FB50090C7DB /* JsonController.swift */,
+				1709747B1D09005F0042674F /* PhotoController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

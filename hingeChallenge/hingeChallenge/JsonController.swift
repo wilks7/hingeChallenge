@@ -14,11 +14,12 @@ class JsonController {
     
     static let urlString = "https://hinge-homework.s3.amazonaws.com/client/services/homework.json"
     
+    // fetch photo objects with urlString
     static func fetchPhotoObjects(completion:(photos: [Photo]?, error: NSError?)->Void){
         
         if let url = NSURL(string: urlString){
             
-            let dataTask = NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) -> Void in
+            let _ = NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) -> Void in
                 
                 // error handling
                 if let error = error {
@@ -40,7 +41,6 @@ class JsonController {
                     return
                 }
                 
-                
                 var photoArray = [Photo]()
                 
                 //handle loop JSON to custon object
@@ -50,7 +50,7 @@ class JsonController {
                         var name = "No Name"
                         var description = ""
                         var imgUrlString = ""
-                        var photo: UIImage?
+                        //var photo: UIImage?
                         let defaultImage = UIImage(named: "noImage")!
                         
                         
@@ -66,31 +66,10 @@ class JsonController {
                             imgUrlString = dicImgUrlString
                         }
                         
-//                        if let dictUrlString = photoDict["imageURL"] as? String {
-//                            
-//                            guard let url = NSURL(string: dictUrlString) else {return}
-//
-//                            if let data = NSData(contentsOfURL: url){
-//                                if let image = UIImage(data: data){
-//                                    //dispatch_async(dispatch_get_main_queue()) { () -> Void in
-//                                        photo = image
-//                                    //}
-//                                }
-//                            }
-//                        }
-                        
                         //create photo object to add to photo object array declared above
-                        if let photo = photo {
-                            //let newPhoto = Photo(name: name, description: description,  image: photo)
-                            let newPhoto = Photo(name: name, description: description, imgUrlString: imgUrlString, image: defaultImage)
-                            photoArray.append(newPhoto)
-                        } else {
-                            //let newPhoto = Photo(name: name, description: description, image: defaultImage)
-                            let newPhoto = Photo(name: name, description: description, imgUrlString: imgUrlString, image: defaultImage)
-                            photoArray.append(newPhoto)
-                            print("photo is nil")
-                        }
-                    }
+                        let newPhoto = Photo(name: name, description: description, imgUrlString: imgUrlString, image: defaultImage)
+                        photoArray.append(newPhoto)
+                }
                     completion(photos: photoArray, error: nil)
                 } else {
                     print("error looping through JSON object")
@@ -101,32 +80,6 @@ class JsonController {
     }//fetchPhotos
     
     
-    static func photosFromUrl(urlStringArray: [String], completion:(images: [UIImage])->Void){
-        var allImages = [UIImage]()
-        let dispatchGroup = dispatch_group_create()
-        
-        for s in urlStringArray {
-            dispatch_group_enter(dispatchGroup)
-            
-            guard let url = NSURL(string: s) else {return}
-            
-            if let data = NSData(contentsOfURL: url){
-                if let image = UIImage(data: data){
-                    allImages.append(image)
-                } else {
-                    allImages.append(UIImage(named: "noImage")!)
-                }
-            } else {
-                allImages.append(UIImage(named: "noImage")!)
-            }
-            
-            dispatch_group_leave(dispatchGroup)
-        }//for
-        
-        dispatch_group_notify(dispatchGroup, dispatch_get_main_queue()) { () -> Void in
-            completion(images: allImages)
-        }
-    }
     
 }
 

@@ -39,6 +39,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="hingeIcon" width="400" height="400"/>
+        <image name="hingeIcon" width="500" height="500"/>
     </resources>
 </document>

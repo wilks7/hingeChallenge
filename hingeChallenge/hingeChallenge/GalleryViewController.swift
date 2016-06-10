@@ -24,20 +24,24 @@ class GalleryViewController: UIViewController {
     
     
     @IBAction func trashButtonTapped(sender: AnyObject) {
+        //stop slideshow and timer
         self.imageViewOutlet.stopAnimating()
         myTimer?.invalidate()
+        
         let photo = PhotoController.sharedController.allPhotos[self.index - 1]
         self.imageViewOutlet.image = photo.image
+        
         slideShowStatus = false
         buttonOutlet.setTitle("Start Slideshow", forState: .Normal)
-
+        
+        //handle removal of object from array
         let alert = UIAlertController(title: "Erase", message: "Are you sure you would like to erase '\(photo.name)' photo?", preferredStyle: .Alert)
         let erase = UIAlertAction(title: "Erase", style: .Destructive) { (_) in
             PhotoController.sharedController.allPhotos.removeAtIndex(self.index - 1)
             if self.index > 2 {
                 self.imageViewOutlet.image = PhotoController.sharedController.allPhotos[self.index - 2].image
             } else if self.index == 0{
-                self.imageViewOutlet.image = PhotoController.sharedController.allPhotos[self.index+1].image
+                self.imageViewOutlet.image = PhotoController.sharedController.allPhotos[self.index + 1].image
             } else if self.index == 1{
                 self.imageViewOutlet.image = PhotoController.sharedController.allPhotos[self.index - 1].image
             }
@@ -50,6 +54,10 @@ class GalleryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupButtons()
+    }
+    
+    func setupButtons(){
         buttonOutlet.layer.borderWidth = 1.50
         buttonOutlet.layer.borderColor = UIColor.myButtonColor().CGColor
         buttonOutlet.layer.cornerRadius = 5
@@ -58,13 +66,16 @@ class GalleryViewController: UIViewController {
     func updateView(photo: Photo, place: Int, total: Int){
         self.index = place
         imageViewOutlet.image = photo.image
-        title = "\(place+1)/\(total)"
+        title = "\(place + 1)/\(total)"
     }
     
     func startSlideShow(){
+        //start slideshow at start of array
         self.index = 1
         title = "1/\(PhotoController.sharedController.allPhotos.count)"
         slideShowStatus = true
+        
+        //create array for slidehshow
         var imageArray = [UIImage]()
         for p in PhotoController.sharedController.allPhotos {
             
@@ -75,6 +86,8 @@ class GalleryViewController: UIViewController {
         self.imageViewOutlet.animationImages = imageArray
         self.imageViewOutlet.animationDuration = 30.0
         self.imageViewOutlet.startAnimating()
+        
+        //start timer to change title
         myTimer = NSTimer.scheduledTimerWithTimeInterval(2.3, target: self, selector: #selector(GalleryViewController.displayTitle), userInfo: nil, repeats: true)
         
     }
