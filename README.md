@@ -8,11 +8,11 @@ Write a simple iOS application in Swift using latest apple’s design guidlines 
 The app should consists of two views:
 
 Homepage View
-	- Displays thumbnails of all the images downloaded from the API endpoint above.
-	- A user can scroll through thumbnails of all the images.
-	- Images should be displayed in the order indicated by the server.
-	- Each image should be downloaded asynchronously and in a thread-safe manner.
-	- Clicking on a thumbnail should open a Gallery View
+- Displays thumbnails of all the images downloaded from the API endpoint above.
+- A user can scroll through thumbnails of all the images.
+- Images should be displayed in the order indicated by the server.
+- Each image should be downloaded asynchronously and in a thread-safe manner.
+- Clicking on a thumbnail should open a Gallery View
 
 Gallery View (Consists of 2 sections) ßßß
   Image View
