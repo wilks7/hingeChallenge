@@ -3,7 +3,7 @@ Code Challenge for Hinge
 
 Code Test: Large Photo App
 
-Write a simple iOS application in Swift using latest apple’s design guidlines based on the following data feed [JSON Link](https://hinge-homework.s3.amazonaws.com/client/services/homework.json/).
+Write a simple iOS application in Swift using latest apple’s design guidlines based on the following data feed [JSON Link](https://hinge-homework.s3.amazonaws.com/client/services/homework.json).
 
 The app should consists of two views:
 
