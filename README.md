@@ -16,7 +16,7 @@ Homepage View
 
 Gallery View (Consists of 2 sections) ßßß
   Image View
-	- Should display a single image to fit the area. 
+	..* Should display a single image to fit the area. 
 	- Will initially display the image that was clicked on in the previous step.
 	- Every two seconds the view should progress to the next image in the list.
 	- After the last image is displayed, starting over with the first image in the list.
