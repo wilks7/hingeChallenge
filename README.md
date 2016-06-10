@@ -1,5 +1,5 @@
 # hingeChallenge
-Code Challenge for Hinge
+I wasnt sure if the slideshow should start automatically, or exactly how the "Gallery View" should look, Im not the best at setting up super pretty UI but I tried doing something flat and simple.
 
 Code Test: Large Photo App
 
